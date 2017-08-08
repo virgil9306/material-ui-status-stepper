@@ -129,6 +129,7 @@ class StatusStepper extends Component {
                     style={Object.assign({}, styles.button, action.style)}
                     labelStyle={styles.buttonLabel}
                     disabled={action.disabled ? action.disabled : false}
+                    key={i}
                     />
             );
         }

@@ -143,7 +143,8 @@ var StatusStepper = function (_Component) {
                     onClick: action.callback,
                     style: Object.assign({}, styles.button, action.style),
                     labelStyle: styles.buttonLabel,
-                    disabled: action.disabled ? action.disabled : false
+                    disabled: action.disabled ? action.disabled : false,
+                    key: i
                 }));
             }
 

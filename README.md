@@ -58,3 +58,7 @@ const steps = [
 * Example page
 * Code coverage to 100%
 * More customizable styles
+
+## Screenshot
+
+![screenshot](https://user-images.githubusercontent.com/18497562/29059099-dec672ac-7c4e-11e7-8929-a6cff04bed61.png)
