@@ -2,6 +2,8 @@
 
 Material UI-inspired vertical status stepper that shows statuses as colorful cards, along with other visual changes
 
+(NPM package: [https://www.npmjs.com/package/material-ui-status-stepper](https://www.npmjs.com/package/material-ui-status-stepper))
+
 ## How to use this
 
   * Clone the repo: `git clone https://github.com/virgil9306/material-ui-status-stepper`
