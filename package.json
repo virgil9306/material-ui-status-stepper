@@ -1,0 +1,40 @@
+{
+  "name": "material-ui-status-stepper",
+  "version": "0.1.0",
+  "description": "Material UI Status Stepper",
+  "main": "app/app.js",
+  "author": "virgil9306",
+  "homepage": "https://github.com/Virgil9306/material-ui-status-stepper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Virgil9306/material-ui-status-stepper.git"
+  },
+  "scripts": {
+    "start": "webpack --progress --colors --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "babel ./src/index.js > ./app/app.js --presets stage-1"
+  },
+  "bugs": {
+    "url": "https://github.com/virgil9306/material-ui-status-stepper/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.24.1",
+    "material-ui": "0.18.0",
+    "prop-types": "^15.5.10",
+    "react": "^0.14.9",
+    "react-component-gulp-tasks": "^0.7.6",
+    "react-dom": "^0.14.9",
+    "webpack": "^1.12.9"
+  }
+}
