@@ -30,9 +30,9 @@ const steps = [
         status: 'INACTIVE', // Status identifier (same as what you pass into currentStatus)
         completed: false, // All statuses preceding currentStatus will be marked as completed = true
         hint: ( // TODO (Contents in expanded version)
-            <ol style={styles.stepper.experimentHint}>
-                <li>Confirm campaign settings</li>
-                <li>Add KPI</li>
+            <ol style={styles.hint}>
+                <li>Something</li>
+                <li>Something else</li>
             </ol>
         ),
         actions: [ // Will be displayed as material-ui button(s). (Ideally keep to ~3 items.)
