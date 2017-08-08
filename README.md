@@ -14,12 +14,12 @@ Material UI-inspired vertical status stepper that shows statuses as colorful car
 
 | Prop name         | Sample value                 | Effect                                                                            |
 |-------------------|------------------------------|-----------------------------------------------------------------------------------|
-| currentStatus     | ```'INACTIVE'```             | Current status to show as active                                                  |
+| currentStatus     | `'INACTIVE'`                | Current status to show as active                                                  |
 | statuses          | (See Example Statuses below) | Statuses to display                                                               |
-| titleStyle        | ```{fontSize: 24}```         | Override style for dialog title                                                   |
-| expandToggleOpen  | ```<p>Open</p>```           | Toggle to open expandBody (TODO)                                                  |
-| expandToggleClose | ```<p>Close</p>```           | Toggle to close expandBody (TODO)                                                 |
-| expandBody        | (Any React component)        | The contents of the expanded dialog when ```expandToggleOpen``` is clicked (TODO) |
+| titleStyle        | `{fontSize: 24}`            | Override style for dialog title                                                   |
+| expandToggleOpen  | `<p>Open</p>`               | Toggle to open expandBody (TODO)                                                  |
+| expandToggleClose | `<p>Close</p>`              | Toggle to close expandBody (TODO)                                                 |
+| expandBody        | (Any React component)        | The contents of the expanded dialog when `expandToggleOpen` is clicked (TODO) |
 
 ### Example Statuses
 
@@ -53,7 +53,8 @@ const steps = [
 
 ## Roadmap
 
-* Expandable support (with React component props 'expandToggleOpen', 'expandToggleClose', and 'expandBody')
+* Expandable support (with React component props `expandToggleOpen`, `expandToggleClose`, and `expandBody`)
 * Add full testing
 * Example page
 * Code coverage to 100%
+* More customizable styles
