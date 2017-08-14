@@ -19,9 +19,6 @@ Material UI-inspired vertical status stepper that shows statuses as colorful car
 | currentStatus     | `'INACTIVE'`                | Current status to show as active                                                  |
 | statuses          | (See Example Statuses below) | Statuses to display                                                               |
 | titleStyle        | `{fontSize: 24}`            | Override style for dialog title                                                   |
-| expandToggleOpen  | `<p>Open</p>`               | Toggle to open expandBody (TODO)                                                  |
-| expandToggleClose | `<p>Close</p>`              | Toggle to close expandBody (TODO)                                                 |
-| expandBody        | (Any React component)        | The contents of the expanded dialog when `expandToggleOpen` is clicked (TODO) |
 
 ### Example Statuses
 
@@ -31,12 +28,6 @@ const steps = [
         title: 'Inactive', // Title to display
         status: 'INACTIVE', // Status identifier (same as what you pass into currentStatus)
         completed: false, // All statuses preceding currentStatus will be marked as completed = true
-        hint: ( // TODO (Contents in expanded version)
-            <ol style={styles.hint}>
-                <li>Something</li>
-                <li>Something else</li>
-            </ol>
-        ),
         actions: [ // Will be displayed as material-ui button(s). (Ideally keep to ~3 items.)
             {
                 name: 'NEXT',
