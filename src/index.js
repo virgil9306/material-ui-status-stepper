@@ -1,9 +1,10 @@
 // react
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 // material-ui
 import {teal500, red500, white} from 'material-ui/styles/colors';
 import {Card, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import PropTypes from 'prop-types';
 
 const styles = {
     button: {
@@ -97,12 +98,6 @@ const styles = {
 };
 
 class StatusStepper extends Component {
-    static propTypes = {
-        currentStatus: PropTypes.string,
-        statuses: PropTypes.array,
-        titleStyle: PropTypes.object,
-    };
-
     _getSelected () {
         let {statuses, currentStatus} = this.props;
         statuses.forEach((item) => {
@@ -270,5 +265,11 @@ class StatusStepper extends Component {
         );
     }
 }
+
+StatusStepper.propTypes = {
+    currentStatus: PropTypes.string,
+    statuses: PropTypes.array,
+    titleStyle: PropTypes.object,
+};
 
 export default StatusStepper;
