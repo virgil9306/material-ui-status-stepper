@@ -12,6 +12,8 @@ Material UI-inspired vertical status stepper that shows statuses as colorful car
   * Import it (```import StatusStepper from 'material-ui-status-stepper';```)
   * Use it!
 
+**NOTE:** Since this *is* a Material-UI component, the dependency is ```material-ui```. You must have an ```MuiThemeProvider``` to use it. [Please see the MaterialUI documentation for an example of how to get an MuiThemeProvider in your app](http://www.material-ui.com/v0.15.0-beta.2/#/get-started/usage).
+
 ## Configuration
 
 | Prop name         | Sample value                 | Effect                                                                            |
@@ -19,9 +21,6 @@ Material UI-inspired vertical status stepper that shows statuses as colorful car
 | currentStatus     | `'INACTIVE'`                | Current status to show as active                                                  |
 | statuses          | (See Example Statuses below) | Statuses to display                                                               |
 | titleStyle        | `{fontSize: 24}`            | Override style for dialog title                                                   |
-| expandToggleOpen  | `<p>Open</p>`               | Toggle to open expandBody (TODO)                                                  |
-| expandToggleClose | `<p>Close</p>`              | Toggle to close expandBody (TODO)                                                 |
-| expandBody        | (Any React component)        | The contents of the expanded dialog when `expandToggleOpen` is clicked (TODO) |
 
 ### Example Statuses
 
@@ -31,12 +30,6 @@ const steps = [
         title: 'Inactive', // Title to display
         status: 'INACTIVE', // Status identifier (same as what you pass into currentStatus)
         completed: false, // All statuses preceding currentStatus will be marked as completed = true
-        hint: ( // TODO (Contents in expanded version)
-            <ol style={styles.hint}>
-                <li>Something</li>
-                <li>Something else</li>
-            </ol>
-        ),
         actions: [ // Will be displayed as material-ui button(s). (Ideally keep to ~3 items.)
             {
                 name: 'NEXT',

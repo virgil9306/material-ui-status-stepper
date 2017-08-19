@@ -1,17 +1,37 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _colors = require('material-ui/styles/colors');
+
+var _Card = require('material-ui/Card');
+
+var _FlatButton = require('material-ui/FlatButton');
+
+var _FlatButton2 = _interopRequireDefault(_FlatButton);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // react
 
-// react
-import React, { Component, PropTypes } from 'react';
 // material-ui
-import { teal500, red500, white } from 'material-ui/styles/colors';
-import { Card, CardActions } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+
 
 var styles = {
     button: {
@@ -58,7 +78,7 @@ var styles = {
         float: 'left'
     },
     markerActive: {
-        backgroundColor: teal500,
+        backgroundColor: _colors.teal500,
         width: 30,
         height: 30,
         borderRadius: 15,
@@ -66,7 +86,7 @@ var styles = {
         float: 'left'
     },
     markerError: {
-        backgroundColor: red500,
+        backgroundColor: _colors.red500,
         width: 30,
         height: 30,
         borderRadius: 15,
@@ -76,14 +96,14 @@ var styles = {
     contentInactive: {
         left: 30,
         marginTop: 4,
-        width: '85%',
+        width: 'calc(100% - 50px)',
         marginLeft: 10,
         float: 'left'
     },
     contentActive: {
         left: 30,
         top: 0,
-        width: '85%',
+        width: 'calc(100% - 50px)',
         marginLeft: 10,
         float: 'left'
     },
@@ -136,7 +156,7 @@ var StatusStepper = function (_Component) {
             for (var i = 0; i < actions.length; i++) {
                 var action = actions[i];
 
-                buttons.push(React.createElement(FlatButton, {
+                buttons.push(_react2.default.createElement(_FlatButton2.default, {
                     label: action.name,
                     primary: action.primary,
                     secondary: action.secondary,
@@ -149,12 +169,12 @@ var StatusStepper = function (_Component) {
             }
 
             if (buttons.length > 0) {
-                return React.createElement(
-                    CardActions,
+                return _react2.default.createElement(
+                    _Card.CardActions,
                     {
-                        style: { backgroundColor: white }
+                        style: { backgroundColor: _colors.white }
                     },
-                    React.createElement(
+                    _react2.default.createElement(
                         'div',
                         {
                             style: { display: 'flex' }
@@ -168,7 +188,7 @@ var StatusStepper = function (_Component) {
     }, {
         key: '_renderLine',
         value: function _renderLine() {
-            return React.createElement('div', {
+            return _react2.default.createElement('div', {
                 style: styles.line
             });
         }
@@ -198,7 +218,7 @@ var StatusStepper = function (_Component) {
             for (var i = 0; i < usableStates.length; i++) {
                 var item = usableStates[i];
                 var actions = this._renderActions(item.actions);
-                var line = i === usableStates.length - 1 ? React.createElement('div', null) : this._renderLine(i);
+                var line = i === usableStates.length - 1 ? _react2.default.createElement('div', null) : this._renderLine(i);
 
                 // Show error marker or not?
                 var markerStyle = reachedActiveStatus ? markerInactive : markerActive;
@@ -207,26 +227,26 @@ var StatusStepper = function (_Component) {
                 if (item.status === currentStatus) {
                     reachedActiveStatus = true;
                     if (actions || item.forceCardDisplay) {
-                        display.push(React.createElement(
+                        display.push(_react2.default.createElement(
                             'div',
                             {
                                 key: i,
                                 style: styles.stepContainerActive
                             },
                             line,
-                            React.createElement('div', {
+                            _react2.default.createElement('div', {
                                 style: markerActive
                             }),
-                            React.createElement(
-                                Card,
+                            _react2.default.createElement(
+                                _Card.Card,
                                 { style: Object.assign({}, styles.contentActive, {
                                         backgroundColor: item.colors.background,
                                         color: item.colors.text
                                     }) },
-                                React.createElement(
+                                _react2.default.createElement(
                                     'div',
                                     null,
-                                    React.createElement(
+                                    _react2.default.createElement(
                                         'span',
                                         { style: Object.assign({}, styles.titleActive, titleStyle) },
                                         item.title
@@ -236,20 +256,20 @@ var StatusStepper = function (_Component) {
                             )
                         ));
                     } else {
-                        display.push(React.createElement(
+                        display.push(_react2.default.createElement(
                             'div',
                             {
                                 key: i,
                                 style: styles.stepContainerInactive
                             },
                             line,
-                            React.createElement('div', {
+                            _react2.default.createElement('div', {
                                 style: markerStyle
                             }),
-                            React.createElement(
+                            _react2.default.createElement(
                                 'div',
                                 { style: styles.contentInactive },
-                                React.createElement(
+                                _react2.default.createElement(
                                     'span',
                                     { style: styles.titleInactive },
                                     item.title
@@ -258,20 +278,20 @@ var StatusStepper = function (_Component) {
                         ));
                     }
                 } else {
-                    display.push(React.createElement(
+                    display.push(_react2.default.createElement(
                         'div',
                         {
                             key: i,
                             style: styles.stepContainerInactive
                         },
                         line,
-                        React.createElement('div', {
+                        _react2.default.createElement('div', {
                             style: markerStyle
                         }),
-                        React.createElement(
+                        _react2.default.createElement(
                             'div',
                             { style: styles.contentInactive },
-                            React.createElement(
+                            _react2.default.createElement(
                                 'span',
                                 { style: styles.titleInactive },
                                 item.title
@@ -296,7 +316,7 @@ var StatusStepper = function (_Component) {
             var selected = this._getSelected();
             var steps = this._renderSteps();
 
-            return React.createElement(
+            return _react2.default.createElement(
                 'div',
                 null,
                 steps
@@ -305,14 +325,13 @@ var StatusStepper = function (_Component) {
     }]);
 
     return StatusStepper;
-}(Component);
+}(_react.Component);
 
 StatusStepper.propTypes = {
-    currentStatus: PropTypes.string,
-    statuses: PropTypes.array,
-    titleStyle: PropTypes.object
+    currentStatus: _propTypes2.default.string,
+    statuses: _propTypes2.default.array,
+    titleStyle: _propTypes2.default.object
 };
 
-
-export default StatusStepper;
+exports.default = StatusStepper;
 
