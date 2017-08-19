@@ -69,14 +69,14 @@ const styles = {
     contentInactive: {
         left: 30,
         marginTop: 4,
-        width: '85%',
+        width: 'calc(100% - 50px)',
         marginLeft: 10,
         float: 'left',
     },
     contentActive: {
         left: 30,
         top: 0,
-        width: '85%',
+        width: 'calc(100% - 50px)',
         marginLeft: 10,
         float: 'left',
     },

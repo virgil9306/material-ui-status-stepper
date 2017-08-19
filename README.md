@@ -12,6 +12,8 @@ Material UI-inspired vertical status stepper that shows statuses as colorful car
   * Import it (```import StatusStepper from 'material-ui-status-stepper';```)
   * Use it!
 
+**NOTE:** Since this *is* a Material-UI component, the dependency is ```material-ui```. You must have an ```MuiThemeProvider``` to use it. [Please see the MaterialUI documentation for an example of how to get an MuiThemeProvider in your app](http://www.material-ui.com/v0.15.0-beta.2/#/get-started/usage).
+
 ## Configuration
 
 | Prop name         | Sample value                 | Effect                                                                            |
